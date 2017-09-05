@@ -55,7 +55,6 @@ export class AppConfigService {
               'deleted'
             ],
             alwaysShow: [
-              'core',
               'citeable',
               'refereed',
               'withdrawn',
@@ -155,9 +154,18 @@ export class AppConfigService {
           '/authors/items/properties/uuid': {
             hidden: true
           },
-          '/authors/items/properties/affiliations/items': {
-            alwaysShow: ['value']
+          '/authors/items/properties/signature_block': {
+            hidden: true
           },
+          '/authors/items/properties/affiliations/items': {
+            alwaysShow: ['value'],
+            order: ['value', 'record']
+          },
+          /* To be set after https://github.com/inveniosoftware-contrib/ng2-json-editor/issues/391 is resolved
+          '/authors/items/properties/ids/items/properties/value': {
+            priority: 1
+          },
+          */
           '/authors/items/properties/affiliations/items/properties/record': {
             refFieldConfig: {
               anchorBuilder: this.commonConfigsService.anchorBuilder
@@ -355,12 +363,12 @@ export class AppConfigService {
                 /^\d{4}-\d{2}-\d{2}$/
               ];
               return formats
-              .some(format => {
-                if (value.match(format)) {
-                  return Date.parse(value) !== NaN;
-                }
-                return false;
-              });
+                .some(format => {
+                  if (value.match(format)) {
+                    return Date.parse(value) !== NaN;
+                  }
+                  return false;
+                });
             }
           },
           'date-time': {
