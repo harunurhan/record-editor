@@ -1,3 +1,4 @@
+import { NormalizerService } from './normalizer.service';
 import { environment } from '../../../environments/environment';
 
 import { Injectable } from '@angular/core';
@@ -291,7 +292,14 @@ export class AppConfigService {
             },
             isbns: {
               items: {
-                order: ['value']
+                order: ['value'],
+                properties: {
+                  value: {
+                    onValueChange: (path, value, store) => {
+                      this.normalizerService.normalizeIsbn(value);
+                    }
+                  }
+                }
               }
             },
             keywords: {
@@ -624,7 +632,8 @@ export class AppConfigService {
   // url to holding api
   readonly holdingpenApiUrl = `${this.apiUrl}/holdingpen`;
 
-  constructor(private commonConfigsService: CommonConfigsService) { }
+  constructor(private commonConfigsService: CommonConfigsService,
+    private normalizerService: NormalizerService) { }
 
   getConfigForRecord(record: Object): EditorConfig {
     let recordType = this.getRecordType(record);

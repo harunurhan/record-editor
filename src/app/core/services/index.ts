@@ -1,3 +1,4 @@
+import { NormalizerService } from './normalizer.service';
 import { CommonApiService } from './common-api.service';
 import { RecordApiService } from './record-api.service';
 import { HoldingpenApiService } from './holdingpen-api.service';
@@ -19,7 +20,8 @@ export {
   FieldSplitterService,
   DomUtilsService,
   RecordSearchService,
-  SavePreviewModalService
+  SavePreviewModalService,
+  NormalizerService
 };
 
 export const CORE_SERVICES = [
@@ -32,5 +34,6 @@ export const CORE_SERVICES = [
   FieldSplitterService,
   DomUtilsService,
   RecordSearchService,
-  SavePreviewModalService
+  SavePreviewModalService,
+  NormalizerService
 ];
