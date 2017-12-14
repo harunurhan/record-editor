@@ -25,9 +25,9 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Observable } from 'rxjs/Observable';
 
-import { RecordSearchService } from '../../core/services';
-import { SearchParams } from '../../shared/interfaces';
-import { SubscriberComponent } from '../../shared/classes';
+import { RecordSearchService } from '../../../core/services';
+import { SearchParams } from '../../../shared/interfaces';
+import { SubscriberComponent } from '../../../shared/classes';
 
 interface RouteType {
   params: { type: string };

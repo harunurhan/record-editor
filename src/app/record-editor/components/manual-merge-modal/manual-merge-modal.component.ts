@@ -27,9 +27,9 @@ import { Observable } from 'rxjs/Observable';
 import { ModalDirective } from 'ngx-bootstrap/modal';
 import { ToastrService } from 'ngx-toastr';
 
-import { RecordApiService, DomUtilsService } from '../../core/services';
-import { RecordRevision } from '../../shared/interfaces';
-import { SubscriberComponent } from '../../shared/classes';
+import { RecordApiService, DomUtilsService } from '../../../core/services';
+import { RecordRevision } from '../../../shared/interfaces';
+import { SubscriberComponent } from '../../../shared/classes';
 
 @Component({
   selector: 're-manual-merge-modal',

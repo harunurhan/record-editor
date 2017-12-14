@@ -20,43 +20,27 @@
  * as an Intergovernmental Organization or submit itself to any jurisdiction.
  */
 
-import { Component, Input, ViewChild, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
-import { ModalDirective } from 'ngx-bootstrap/modal';
-
-import { Ticket } from '../../../shared/interfaces';
-import { RecordApiService } from '../../../core/services';
+import { Ticket } from '../../../../shared/interfaces';
+import { RecordApiService } from '../../../../core/services';
 
 @Component({
-  selector: 're-new-ticket-modal',
-  templateUrl: './new-ticket-modal.component.html',
+  selector: 're-ticket',
+  templateUrl: './ticket.component.html',
   styleUrls: [
-    './new-ticket-modal.component.scss'
+    './ticket.component.scss'
   ]
 })
-export class NewTicketModalComponent {
-  @ViewChild('modal') modal: ModalDirective;
-  @Output() create = new EventEmitter<Ticket>();
+export class TicketComponent {
+  @Input() ticket: Ticket;
+  @Output() resolve = new EventEmitter<void>();
 
-  newTicket = {} as Ticket;
+  constructor(private apiService: RecordApiService) { }
 
-  constructor(public apiService: RecordApiService) { }
-
-  // invoked by parent component.
-  show() {
-    this.modal.show();
-  }
-
-  onNewClick() {
+  onResolveClick() {
     this.apiService
-      .createRecordTicket(this.newTicket)
-      .then(data => {
-        this.newTicket.id = data.id;
-        this.newTicket.link = data.link;
-        this.newTicket.date = new Date().toString();
-        this.create.emit(this.newTicket);
-        this.newTicket = {} as Ticket;
-      });
-    this.modal.hide();
+      .resolveTicket(this.ticket.id)
+      .then(() => this.resolve.emit());
   }
 }

@@ -3,9 +3,9 @@ import { Component, ChangeDetectorRef, ChangeDetectionStrategy, ViewChild, OnIni
 import { ModalDirective } from 'ngx-bootstrap';
 import { ToastrService } from 'ngx-toastr';
 
-import { SavePreviewModalService, RecordApiService, DomUtilsService } from '../../core/services';
-import { SavePreviewModalOptions } from '../../shared/interfaces';
-import { SubscriberComponent } from '../../shared/classes';
+import { SavePreviewModalService, RecordApiService, DomUtilsService } from '../../../core/services';
+import { SavePreviewModalOptions } from '../../../shared/interfaces';
+import { SubscriberComponent } from '../../../shared/classes';
 
 @Component({
   selector: 're-save-preview-modal',

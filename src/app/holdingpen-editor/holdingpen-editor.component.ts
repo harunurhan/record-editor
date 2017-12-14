@@ -32,7 +32,7 @@ import { SubscriberComponent } from '../shared/classes';
 @Component({
   templateUrl: './holdingpen-editor.component.html',
   styleUrls: [
-    '../record-editor/json-editor-wrapper/json-editor-wrapper.component.scss'
+    '../record-editor/components/json-editor-wrapper/json-editor-wrapper.component.scss'
   ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

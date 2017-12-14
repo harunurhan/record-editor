@@ -31,9 +31,8 @@ import { SubscriberComponent } from '../../shared/classes';
   selector: 're-holdingpen-save-button',
   templateUrl: './holdingpen-save-button.component.html',
   styleUrls: [
-    '../../record-editor/json-editor-wrapper/json-editor-wrapper.component.scss'
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    '../../record-editor/components/json-editor-wrapper/json-editor-wrapper.component.scss'
+  ]
 })
 export class HoldingpenSaveButtonComponent extends SubscriberComponent implements OnInit {
   private workflowObject: object;

@@ -26,7 +26,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
   selector: 're-holdingpen-toolbar',
   templateUrl: './holdingpen-toolbar.component.html',
   styleUrls: [
-    '../../record-editor/json-editor-wrapper/json-editor-wrapper.component.scss'
+    '../../record-editor/components/json-editor-wrapper/json-editor-wrapper.component.scss'
   ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

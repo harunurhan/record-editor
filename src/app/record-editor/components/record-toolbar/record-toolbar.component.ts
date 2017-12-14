@@ -22,8 +22,8 @@
 
 import { Component, Input, ChangeDetectionStrategy, Output, EventEmitter, ChangeDetectorRef, OnInit } from '@angular/core';
 
-import { SavePreviewModalService, GlobalAppStateService } from '../../core/services';
-import { SubscriberComponent } from '../../shared/classes';
+import { SavePreviewModalService, GlobalAppStateService } from '../../../core/services';
+import { SubscriberComponent } from '../../../shared/classes';
 
 @Component({
   selector: 're-record-toolbar',

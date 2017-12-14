@@ -22,9 +22,9 @@
 
 import { Component, OnInit, Output, EventEmitter, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 
-import { RecordApiService } from '../../core/services';
-import { RecordRevision } from '../../shared/interfaces';
-import { SubscriberComponent } from '../../shared/classes';
+import { RecordApiService } from '../../../core/services';
+import { RecordRevision } from '../../../shared/interfaces';
+import { SubscriberComponent } from '../../../shared/classes';
 
 @Component({
   selector: 're-record-history',

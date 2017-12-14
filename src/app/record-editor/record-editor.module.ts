@@ -25,14 +25,14 @@ import { RouterModule } from '@angular/router';
 
 import { SharedModule } from '../shared';
 
-import { JsonEditorWrapperComponent } from './json-editor-wrapper';
-import { RecordToolbarComponent } from './record-toolbar';
-import { RecordHistoryComponent } from './record-history';
-import { SearchBarComponent } from './search-bar';
-import { TicketsComponent, NewTicketModalComponent, TicketComponent } from './tickets';
-import { RecordSearchComponent } from './record-search';
-import { SavePreviewModalComponent } from './save-preview-modal';
-import { ManualMergeModalComponent } from './manual-merge-modal';
+import { JsonEditorWrapperComponent } from './components/json-editor-wrapper';
+import { RecordToolbarComponent } from './components/record-toolbar';
+import { RecordHistoryComponent } from './components/record-history';
+import { SearchBarComponent } from './components/search-bar';
+import { TicketsComponent, NewTicketModalComponent, TicketComponent } from './components/tickets';
+import { RecordSearchComponent } from './components/record-search';
+import { SavePreviewModalComponent } from './components/save-preview-modal';
+import { ManualMergeModalComponent } from './components/manual-merge-modal';
 
 @NgModule({
   imports: [

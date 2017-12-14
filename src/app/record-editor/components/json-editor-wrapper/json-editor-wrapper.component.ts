@@ -25,8 +25,8 @@ import { ActivatedRoute } from '@angular/router';
 import { SchemaValidationProblems } from 'ng2-json-editor';
 import { ToastrService } from 'ngx-toastr';
 
-import { RecordApiService, AppConfigService, DomUtilsService, GlobalAppStateService } from '../../core/services';
-import { SubscriberComponent } from '../../shared/classes';
+import { RecordApiService, AppConfigService, DomUtilsService, GlobalAppStateService } from '../../../core/services';
+import { SubscriberComponent } from '../../../shared/classes';
 
 @Component({
   selector: 're-json-editor-wrapper',

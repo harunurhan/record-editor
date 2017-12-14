@@ -26,9 +26,9 @@ import { ToastrService } from 'ngx-toastr';
 
 import { Observable } from 'rxjs/Observable';
 
-import { RecordApiService } from '../../core/services';
-import { Ticket } from '../../shared/interfaces';
-import { SubscriberComponent } from '../../shared/classes';
+import { RecordApiService } from '../../../core/services';
+import { Ticket } from '../../../shared/interfaces';
+import { SubscriberComponent } from '../../../shared/classes';
 
 
 @Component({

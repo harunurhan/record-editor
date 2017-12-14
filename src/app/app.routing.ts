@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { JsonEditorWrapperComponent } from './record-editor/json-editor-wrapper';
-import { RecordSearchComponent } from './record-editor/record-search';
+import { JsonEditorWrapperComponent } from './record-editor/components/json-editor-wrapper';
+import { RecordSearchComponent } from './record-editor/components/record-search';
 import { HoldingpenEditorComponent } from './holdingpen-editor/holdingpen-editor.component';
 
 const appRoutes: Routes = [

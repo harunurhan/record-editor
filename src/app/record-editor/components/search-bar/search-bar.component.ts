@@ -25,9 +25,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { ReplaySubject } from 'rxjs/ReplaySubject';
 
-import { RecordSearchService, SavePreviewModalService, GlobalAppStateService } from '../../core/services';
-import { SearchParams } from '../../shared/interfaces';
-import { SubscriberComponent } from '../../shared/classes';
+import { RecordSearchService, SavePreviewModalService, GlobalAppStateService } from '../../../core/services';
+import { SearchParams } from '../../../shared/interfaces';
+import { SubscriberComponent } from '../../../shared/classes';
 
 @Component({
   selector: 're-search-bar',
