@@ -36,6 +36,8 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "@ngrx/effects": "^4.1.1",
+    "@ngrx/store": "^4.1.1",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
     "immutable": "^3.8.1",
@@ -49,7 +51,7 @@
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "1.4.5",
+    "@angular/cli": "1.5",
     "@angular/compiler-cli": "^4.0.0",
     "@types/jasmine": "2.5.38",
     "@types/lodash": "4.14.57",
@@ -68,7 +70,7 @@
     "protractor": "~5.1.0",
     "ts-node": "1.2.1",
     "tslint": "^5.0.0",
-    "typescript": "~2.3.0",
+    "typescript": "~2.4.0",
     "util-deprecate": "^1.0.2"
   },
   "repository": {

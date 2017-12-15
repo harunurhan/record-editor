@@ -22,8 +22,13 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 import { SharedModule } from '../shared';
+
+import { reducers } from './reducers';
+import { RecordEffects } from './effects/record';
 
 import { JsonEditorWrapperComponent } from './components/json-editor-wrapper';
 import { RecordToolbarComponent } from './components/record-toolbar';
@@ -34,10 +39,15 @@ import { RecordSearchComponent } from './components/record-search';
 import { SavePreviewModalComponent } from './components/save-preview-modal';
 import { ManualMergeModalComponent } from './components/manual-merge-modal';
 
+
+
+
 @NgModule({
   imports: [
     SharedModule,
-    RouterModule
+    RouterModule,
+    StoreModule.forFeature('record-editor', reducers),
+    EffectsModule.forFeature([RecordEffects]),
   ],
   declarations: [
     JsonEditorWrapperComponent,

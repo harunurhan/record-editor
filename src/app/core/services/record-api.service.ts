@@ -63,6 +63,13 @@ export class RecordApiService extends CommonApiService {
     return this.fetchUrl(this.currentRecordApiUrl);
   }
 
+  loadRecord(pidType: string, pidValue: string): Observable<object> {
+    return this.http
+      .get(`${apiUrl}/${pidType}/${pidValue}/db`)
+      .map(response => response.json());
+
+  }
+
   saveRecord(record: object): Observable<void> {
     return this.http
       .put(this.currentRecordApiUrl, record)
@@ -70,7 +77,7 @@ export class RecordApiService extends CommonApiService {
   }
 
   fetchRecordTickets(): Promise<Array<Ticket>> {
-    return this.fetchUrl(`${this.currentRecordEditorApiUrl}/rt/tickets`);
+    return this.fetchUrl(`${this.currentRecordEditorApiUrl}/rt/tickets`) as Promise<Array<Ticket>>;
   }
 
   createRecordTicket(ticket: Ticket): Promise<{ id: string, link: string }> {
